@@ -102,10 +102,11 @@ const Navbar = () => {
 
 const Hero = ({ content }: { content: SiteContent['hero'] }) => {
   const renderHeadline = (text: string) => {
-    const parts = text.split(/(208명)/g);
-    return parts.map((part, i) => 
-      part === '208명' 
-        ? <span key={i} className="text-brand-blue font-bold relative inline-block">
+    const parts = text.split(/(208명|레딧)/g);
+    return parts.map((part, i) => {
+      if (part === '208명') {
+        return (
+          <span key={i} className="text-brand-blue font-bold relative inline-block">
             {part}
             <motion.span 
               initial={{ width: 0 }}
@@ -113,9 +114,24 @@ const Hero = ({ content }: { content: SiteContent['hero'] }) => {
               transition={{ delay: 0.5, duration: 0.8 }}
               className="absolute bottom-1 left-0 h-3 bg-brand-blue/10 -z-10"
             />
-          </span> 
-        : part
-    );
+          </span>
+        );
+      }
+      if (part === '레딧') {
+        return (
+          <span key={i} className="text-reddit-orange font-bold relative inline-block">
+            {part}
+            <motion.span 
+              initial={{ width: 0 }}
+              whileInView={{ width: '100%' }}
+              transition={{ delay: 0.5, duration: 0.8 }}
+              className="absolute bottom-1 left-0 h-3 bg-reddit-orange/10 -z-10"
+            />
+          </span>
+        );
+      }
+      return part;
+    });
   };
 
   return (
@@ -178,6 +194,23 @@ const Hero = ({ content }: { content: SiteContent['hero'] }) => {
 };
 
 const Service = ({ content }: { content: SiteContent['service'] }) => {
+  const renderWhyReddit = (text: string) => {
+    const parts = text.split(/(ROAS 1위 광고 채널)/g);
+    return parts.map((part, i) => 
+      part === 'ROAS 1위 광고 채널' 
+        ? <span key={i} className="text-reddit-orange font-bold relative inline-block">
+            {part}
+            <motion.span 
+              initial={{ width: 0 }}
+              whileInView={{ width: '100%' }}
+              transition={{ delay: 0.8, duration: 0.8 }}
+              className="absolute bottom-0 left-0 h-[2px] bg-reddit-orange -z-10"
+            />
+          </span> 
+        : part
+    );
+  };
+
   const getIcon = (iconName: string) => {
     switch (iconName) {
       case 'Music': return <Music />;
@@ -208,7 +241,7 @@ const Service = ({ content }: { content: SiteContent['service'] }) => {
             </div>
             <h3 className="text-2xl font-bold mb-4 break-keep">왜 레딧인가요?</h3>
             <p className="text-gray-600 leading-relaxed text-lg break-keep">
-              {content.whyReddit}
+              {renderWhyReddit(content.whyReddit)}
             </p>
           </motion.div>
 
