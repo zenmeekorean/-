@@ -150,7 +150,7 @@ const Hero = ({ content }: { content: SiteContent['hero'] }) => {
           <h1 className="text-3xl md:text-5xl font-bold leading-[1.2] mb-8 whitespace-pre-line break-keep">
             {renderHeadline(content.headline)}
           </h1>
-          <p className="text-xl text-gray-600 leading-relaxed mb-10 max-w-xl break-keep whitespace-pre-line">
+          <p className="text-xl text-gray-600 leading-relaxed mb-10 max-w-xl break-keep whitespace-normal md:whitespace-pre-line">
             {content.subHeadline}
           </p>
         <div className="flex flex-col sm:flex-row gap-4">
