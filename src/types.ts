@@ -34,7 +34,7 @@ export interface SiteContent {
 
 export const initialContent: SiteContent = {
   hero: {
-    headline: "영어권 시장 정복,\n208명의 원어민 레딧 전문가들과 함께 하세요.",
+    headline: "영어권 시장 정복,\n37명의 원어민 레딧 전문가들과 함께 하세요.",
     subHeadline: "영어권 최대 커뮤니티 레딧으로 커뮤니티 마케팅부터 SEO,\nGEO까지 연결 가능한 브랜드 성장 파트너",
     ctaPrimary: "무료 컨설팅 신청하기",
     ctaSecondary: "사업 소개서 보기"
@@ -54,7 +54,7 @@ export const initialContent: SiteContent = {
   whyUs: {
     title: "생성형 AI 검색 시대,\n브랜드 경쟁력은 텍스트 콘텐츠에서 갈립니다",
     values: [
-      { id: "ai", title: "1. 사람 냄새 나는 콘텐츠", description: "레딧에서는 광고 티가 나는 번역투보다 실제 고객의 경험이 드러나는 글이 중요합니다. 브리닷은 각 산업에 특화된 208명의 원어민 전문가들이 브랜드 맥락&현지 반응까지 담습니다." },
+      { id: "ai", title: "1. 사람 냄새 나는 콘텐츠", description: "레딧에서는 광고 티가 나는 번역투보다 실제 고객의 경험이 드러나는 글이 중요합니다. 브리닷은 각 산업에 특화된 37명의 원어민 전문가들이 브랜드 맥락&현지 반응까지 담습니다." },
       { id: "search", title: "2. 검색에 강한 콘텐츠", description: "비주얼 중심의 SNS는 빠르게 소비되지만, 레딧 콘텐츠는 검색 결과에 오래 남습니다. 구매의도가 높은 고객이 찾는 플랫폼인 만큼, 콘텐츠가 쌓일수록 브랜드 신뢰도가 높아집니다." },
       { id: "geo", title: "3. AI가 선택하는 콘텐츠", description: "AI는 브랜드가 제공하는 정보와 실제 고객 반응이 담긴 텍스트를 종합적으로 봅니다. 브리닷은 고객의 시선에 브랜드 의도를 녹여, AI시대에 더 유리한 콘텐츠를 만듭니다." }
     ]

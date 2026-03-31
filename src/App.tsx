@@ -30,7 +30,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         <Link to="/" className="flex items-center gap-3">
           <div className="w-10 h-10 rounded-xl bg-white shadow-sm border border-gray-100 flex items-center justify-center overflow-hidden">
-            <img src={logoUrl} alt="Bridot Marketing Logo" className="w-full h-full object-contain object-[44%_center] p-1" referrerPolicy="no-referrer" />
+            <img src={logoUrl} alt="브리닷 마케팅 로고" className="w-full h-full object-contain object-[44%_center] p-1" referrerPolicy="no-referrer" />
           </div>
           <span className="text-2xl font-serif font-bold tracking-tight">브리닷 <span className="text-brand-blue">마케팅</span></span>
         </Link>
@@ -102,9 +102,9 @@ const Navbar = () => {
 
 const Hero = ({ content }: { content: SiteContent['hero'] }) => {
   const renderHeadline = (text: string) => {
-    const parts = text.split(/(208명|레딧)/g);
+    const parts = text.split(/(37명|레딧)/g);
     return parts.map((part, i) => {
-      if (part === '208명') {
+      if (part === '37명') {
         return (
           <span key={i} className="text-brand-blue font-bold relative inline-block">
             {part}
@@ -182,7 +182,12 @@ const Hero = ({ content }: { content: SiteContent['hero'] }) => {
       >
         <div className="relative z-10 rounded-[40px] md:rounded-[80px] lg:rounded-tr-none lg:rounded-br-none overflow-hidden shadow-2xl lg:h-[460px]">
           <div className="absolute inset-0 bg-gradient-to-t from-brand-blue/20 to-transparent z-10 pointer-events-none" />
-          <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80" alt="Abstract Tech Bridge Network" className="w-full h-full object-cover transition-all duration-700" referrerPolicy="no-referrer" />
+          <img 
+            src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80" 
+            alt="글로벌 네트워크와 데이터 연결을 상징하는 추상적인 테크 이미지" 
+            className="w-full h-full object-cover transition-all duration-700" 
+            referrerPolicy="no-referrer" 
+          />
         </div>
         <div className="absolute -inset-4 bg-brand-blue/10 rounded-[60px] md:rounded-[100px] blur-3xl -z-10" />
         <div className="absolute -bottom-10 -left-10 w-48 h-48 bg-brand-blue/10 rounded-full blur-3xl -z-10" />
@@ -367,7 +372,7 @@ const Footer = () => {
         <div className="flex flex-col items-center md:items-start">
           <Link to="/" className="flex items-center gap-3 mb-6">
             <div className="w-10 h-10 rounded-xl bg-white shadow-sm border border-gray-100 flex items-center justify-center overflow-hidden">
-              <img src={logoUrl} alt="Bridot Marketing Logo" className="w-full h-full object-contain object-[44%_center] p-1" referrerPolicy="no-referrer" />
+              <img src={logoUrl} alt="브리닷 마케팅 로고" className="w-full h-full object-contain object-[44%_center] p-1" referrerPolicy="no-referrer" />
             </div>
             <span className="text-xl font-serif font-bold tracking-tight">브리닷 마케팅</span>
           </Link>
