@@ -368,7 +368,7 @@ const Footer = () => {
   
   return (
     <footer className="bg-gray-50 py-20 border-t border-gray-100">
-      <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-12 text-center md:text-left">
+      <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center md:items-end gap-12 text-center md:text-left">
         <div className="flex flex-col items-center md:items-start">
           <Link to="/" className="flex items-center gap-3 mb-6">
             <div className="w-10 h-10 rounded-xl bg-white shadow-sm border border-gray-100 flex items-center justify-center overflow-hidden">
@@ -380,6 +380,7 @@ const Footer = () => {
             <p>브리닷 마케팅</p>
             <p>대표 장지영</p>
             <p>사업자등록번호 534-79-00552</p>
+            <p className="lowercase">general@bridotmarketing.com</p>
           </div>
         </div>
         
